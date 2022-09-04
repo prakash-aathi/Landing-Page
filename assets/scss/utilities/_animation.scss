@@ -1,0 +1,29 @@
+@keyframes anim {
+    0%{
+        color: red;
+    }
+    50%{
+        color: blue;
+    }
+    100%{
+        color: green;
+    }
+}
+
+@keyframes rot{
+    0%{
+       transform: rotate(0deg); 
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-circle {
+    0%{
+        transform: rotate(0deg); 
+     }
+     100%{
+         transform: rotate(360deg);
+     }
+}

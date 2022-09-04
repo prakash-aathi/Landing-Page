@@ -1,0 +1,180 @@
+.roadmap {
+    padding: 8rem 20rem;
+
+    @include responsive(xs) {
+        padding: 4rem 2rem;
+    }
+    
+    @include responsive(sm) {
+        padding: 4rem 2rem;
+    }
+
+        
+    @include responsive(lg) {
+        padding: 4rem 8rem ;
+    }
+
+            
+    @include responsive(xlg) {
+        padding: 8rem 15rem;
+    }
+
+        
+    @include responsive(xxlg) {
+        padding: 8rem 20rem;
+    }
+
+    &_heading {
+        text-align: center;
+        line-height: 3rem;
+
+        .line {
+            background-image: linear-gradient(to right, rgb(245, 139, 156), blue);
+            width: 10rem;
+            height: 0.8rem;
+            border-radius: 2rem;
+            margin: 25px auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: gray;
+        }
+    }
+
+    &_elements {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+
+        .arrows{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .arrows {
+            margin: 2rem 0;
+            font-weight: 600;
+            font-size: 3rem;
+
+            @include responsive(xs) {
+                transform: rotate(90deg);
+            }
+            @include responsive(sm) {
+                transform: rotate(90deg);
+            }
+            @include responsive(lg) {
+                transform: none;
+            }
+
+        }
+
+        @include responsive(xs) {
+            display: block;
+        }
+        
+        @include responsive(sm) {
+            display: block;
+        }
+
+        @include responsive(lg) {
+            display: flex;
+        }
+
+    }
+
+    
+
+    &_element {
+        transition: 400ms;
+        text-align: center;
+        position: relative;
+
+        cursor: pointer;
+        // max-width: 350px;
+        // margin-left: 3rem;
+        filter: grayscale(100%);
+        @include responsive(xxlg) {
+            padding: 0 5rem;
+        }
+                // padding: 0 5rem;
+
+        &:hover &_img::after {
+            animation: rotate-circle 4000ms linear infinite;
+            // filter: grayscale(0%);
+        }
+
+        &:hover {
+            filter: grayscale(0%);
+        }
+
+
+        &:hover h4 {
+            color: map-get($colors, primary);
+        }
+
+        &:hover .material-symbols-outlined {
+            color: map-get($colors, primary);
+        }
+
+        &_img {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+
+            img {
+                width: 60px;
+                margin-top: 25px;
+                // padding: 3rem 1rem;
+                // height: 90px;
+            }
+
+            &::after {
+                border: 5px dotted map-get($colors, primary);
+                content: "";
+                width: 100%;
+                height: 100%;
+                top: 0;
+                position: absolute;
+                left: -5px;
+                border-radius: 50%;
+            }
+        }
+
+        &_contents {
+            margin-top: 2rem;
+
+            h4 {
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-bottom: 1.4rem;
+                    
+    @include responsive(xxlg) {
+        font-size: 1.5rem;
+    }
+            }
+
+            p {
+                color: gray;
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            @include responsive(xxlg) {
+                font-size: 1.4rem;
+            }
+        }
+
+
+    }
+}
+

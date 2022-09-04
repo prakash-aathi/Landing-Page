@@ -1,0 +1,67 @@
+footer{
+    padding: 40px ;
+    text-align: center;
+    background-color: rgb(0 0 0 / 67%);
+    color: white;
+
+    a{
+        color: white;
+    }
+    a:hover{
+        text-shadow: 5px 5px 10px black;
+    }
+    img:hover{
+        transition: 400ms;
+        background-color: rgb(0 0 0 / 10%);
+    }
+    .heading{
+        h2{
+            margin-bottom: 1.6rem;
+            @include responsive(xs) {
+                display: block;
+                font-size: 1.2rem;
+            
+            }
+            @include responsive(sm) {
+                display: block;
+                font-size: 1.2rem;
+            
+            }
+            @include responsive(xxlg) {
+                display: block;
+                font-size: 1.5rem;
+            
+            }
+
+        }
+        p{
+            margin-bottom: 1.6rem;
+            @include responsive(xs) {
+                font-size: 0.9rem;
+            }
+            @include responsive(sm) {
+                font-size: 0.9rem;
+            }
+            @include responsive(xxlg) {
+                display: block;
+                font-size: 1.4rem;
+            
+            }
+        }
+    }
+    .social_icons{
+        margin-bottom: 1.6rem ;
+        a{
+            padding: 0 0.8rem;
+        }
+    }
+    .terms{
+        @include responsive(xs) {
+            font-size: 0.9rem;
+        }
+        @include responsive(sm) {
+            font-size: 0.9rem;
+        }
+
+    }
+}

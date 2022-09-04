@@ -1,0 +1,42 @@
+.btn{
+    justify-content: center;
+    border-radius: 6px;
+    padding: 1rem ;
+    background-color: map-get($colors, primary );
+    line-height: 1;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin: 1rem 0;
+    a{
+        color: white !important;
+    }
+}
+
+.btn:hover{
+    background-color: map-get($colors , primary-hover );
+}
+
+.outer_btn{
+    border: solid map-get($colors , primary );
+    border-radius: 6px;
+    padding: 1rem ;
+    line-height: 1;
+    font-size: 1rem;
+    font-weight: 600;
+    color: map-get($colors , primary );
+    margin: 1rem 0 1rem 1rem ;
+}
+
+.outer_btn:hover{
+    background-color: map-get($colors, primary-hover );
+    color: white;
+}
+
+.label{
+    background-color: map-get($colors, primary );
+    color: white;
+    border-radius: 1rem;
+    padding: 0.1rem 1.4rem;
+    
+}
