@@ -1,0 +1,115 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 15rem;
+    border-bottom: solid rgb(240, 231, 231);
+
+    &_icon{
+            display: none;
+
+            @include responsive(xs) {
+                display: block;
+                font-size: 1.3rem;
+            }
+            @include responsive(sm) {
+                display: block;
+                font-size: 1.3rem;
+            }
+            @include responsive(lg) {
+                display: none !important; 
+            }
+    }
+
+    
+    @include responsive(xs) {
+        padding: 1rem 2rem;
+    }
+
+    @include responsive(sm) {
+        padding: 1rem 2rem;
+    }
+
+    @include responsive(lg) {
+        padding: 1rem 2rem ;
+    }
+
+    @include responsive(xlg) {
+        padding: 1rem 12rem;
+    }
+
+    @include responsive(xxlg) {
+        padding: 1rem 20rem  ;
+    }
+    
+
+    &_logo {
+        font-size: 1.4rem;
+    }
+
+    &_menus {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        @include responsive(xs){
+            display: none;
+            position: fixed;
+            top: -100%;
+            background-color: aqua;
+            width: 100vw;
+            // padding: 2rem;
+            left: 0;
+            height: 100vh;
+            z-index: 1;
+            text-align: center;
+            transition: 500ms;
+            &.show{
+                display: block !important;
+                top: 70px;
+                & li{
+                    padding: 1rem ;
+                }
+            }
+        }
+
+        @include responsive(sm){
+            display: none;
+        }
+
+        @include responsive(lg){
+            display: flex;
+        }
+
+
+        li {
+            margin-right: 1rem;
+
+            a {
+                color: black;
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    a:hover {
+        color: map-get($colors, primary-hover);
+    }
+
+    .active {
+        color: map-get($colors, primary);
+    }
+
+}
+
+.nav-fixed{
+    position: fixed;
+    top: -1px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 5;
+    box-shadow: 1px 1px 2px 0 #e6e6e6;
+}
