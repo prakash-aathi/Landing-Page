@@ -1,5 +1,0 @@
-// not working 
-@function color($color:"primary"){
-  @return map-get($colors , $color );
-}
-
