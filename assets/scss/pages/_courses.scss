@@ -1,0 +1,206 @@
+.courses {
+    // margin: 0;
+    padding: 8rem 20rem;
+    background-color: map-get($colors, primary);
+
+    @include responsive(xs) {
+        padding: 4rem 2rem;
+    }
+
+    @include responsive(sm) {
+        padding: 4rem 2rem;
+    }
+
+    @include responsive(lg) {
+        padding: 4rem 2rem;
+    }
+
+    @include responsive(xlg) {
+        padding: 4rem 8rem;
+    }
+
+
+    @include responsive(xxlg) {
+        padding: 8rem 20rem;
+    }
+
+
+    &_heading {
+        color: white;
+        text-align: center;
+        // margin-bottom: 5rem;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+
+            @include responsive(xs) {
+                font-size: 1.5rem;
+            }
+
+            @include responsive(sm) {
+                font-size: 1.5rem;
+            }
+
+
+            @include responsive(xxlg) {
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            color: rgb(223, 223, 223);
+            font-size: 1.4rem;
+
+            @include responsive(xs) {
+                font-size: 1.1rem;
+                margin-bottom: 3rem;
+            }
+
+            @include responsive(sm) {
+                font-size: 1.1rem;
+                margin-bottom: 3rem;
+            }
+
+
+            @include responsive(xxlg) {
+                font-size: 1.6rem;
+            }
+        }
+
+
+    }
+
+    .courses_card_body {
+        padding: 0 1rem;
+    }
+
+    &_cards {
+        display: flex;
+        justify-content: space-between;
+
+        @include responsive(xs) {
+            flex-direction: column;
+            // margin-bottom: 2rem;
+        }
+
+
+        @include responsive(sm) {
+            flex-direction: column;
+            align-items: center;
+            // margin-bottom: 2rem;
+        }
+
+
+        @include responsive(lg) {
+            flex-direction: row;
+            // align-items: center;
+            // margin-bottom: 2rem;
+        }
+
+
+    }
+
+    a {
+        color: rgba(0, 0, 0, 0.628);
+        margin-bottom: 2rem;
+    }
+
+    a:hover {
+        box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.669);
+    }
+
+    .courses_card {
+        background-color: #fff;
+        max-width: 380px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        @include responsive(lg) {
+            max-width: 280px;
+        }
+
+
+        @include responsive(xxlg) {
+            max-width: 380px;
+            // background-color: red;
+        }
+
+        &_img {
+            width: 380px;
+
+            @include responsive(lg) {
+                width: 280px;
+            }
+
+            @include responsive(xxlg) {
+                width: 380px ;
+                
+            }
+        }
+
+        &_body {
+            padding: 2rem;
+
+            h4 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                font-weight: 800;
+
+                @include responsive(xs) {
+                    font-size: 1.3rem;
+                }
+
+                @include responsive(sm) {
+                    font-size: 1.3rem;
+                }
+
+                @include responsive(lg) {
+                    font-size: 1.2rem;
+                }
+                @include responsive(xxlg) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            p {
+                color: gray;
+                line-height: 1.5;
+
+                @include responsive(xs) {
+                    font-size: 0.9rem;
+                }
+
+                @include responsive(sm) {
+                    font-size: 0.9rem;
+                }
+
+                @include responsive(lg) {
+                    font-size: 1rem;
+                }
+                @include responsive(xxlg) {
+                    font-size: 1.2rem;
+                }
+
+            }
+        }
+    }
+
+    &_info {
+        color: #fff;
+        text-align: center;
+        // margin-top: 5rem;
+        font-size: 1.6rem;
+
+        a {
+            color: #fff;
+        }
+
+        a:hover {
+            // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 20px 5px rgba(11, 7, 7, 0.187);
+            // box-shadow: 1px 1px 2px 0 #e6e6e6;
+        }
+    }
+
+}
